@@ -19,6 +19,7 @@ def last_digitor(number):
 
 
 last_digit = last_digitor(number)
+number = int(number)
 last_digit = int(last_digit)
 
 
