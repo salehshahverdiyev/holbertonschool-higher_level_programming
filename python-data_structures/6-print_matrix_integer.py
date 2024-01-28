@@ -11,3 +11,5 @@ def print_matrix_integer(matrix=[[]]):
                 print(" ", end="")
             j += 1
         i += 1
+    if matrix == [[]]:
+        print("")
