@@ -5,6 +5,12 @@ class Square
 
 
 class Square():
+    """
+    Private instance attribute: size
+    Private instance attribute: position
+    Public instance method: def area(self):
+    Public instance method: def my_print(self):
+    """
     def __init__(self, size=0, position=(0, 0)):
         self.size = size
         self.position = position
