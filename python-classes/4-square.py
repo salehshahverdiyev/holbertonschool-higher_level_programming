@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This file contains Square class inside
+class Square
 """
 
 
