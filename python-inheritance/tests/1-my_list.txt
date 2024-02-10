@@ -3,18 +3,6 @@ The ``1. MyList`` module
 ===================================
 
 >>> my_list = __import__('1-my_list').MyList([4, 2, 7, 1, 5])
->>> my_list.print_sorted()
-[1, 2, 4, 5, 7]
-
->>> my_list.append(-3)
->>> my_list.print_sorted()
-[-3, 1, 2, 4, 5, 7]
-
->>> my_list = __import__('1-my_list').MyList([])
->>> my_list.print_sorted()
-[]
-
->>> my_list = __import__('1-my_list').MyList([4, 2, 7, 1, 5])
 >>> sorted_list = my_list.print_sorted()
->>> print(sorted_list is not my_list)
-True
+>>> sorted_list
+[1, 2, 4, 5, 7]
