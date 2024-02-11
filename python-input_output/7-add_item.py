@@ -20,3 +20,7 @@ def method():
         obj = []
     obj += argv[1:]
     save_to_json_file(obj, "add_item.json")
+
+
+if __name__ == "__main__":
+    method()
