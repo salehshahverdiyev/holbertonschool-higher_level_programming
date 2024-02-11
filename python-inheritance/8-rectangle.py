@@ -23,8 +23,10 @@ class Rectangle(BaseGeometry):
     class Documentation
     '''
     def __init__(self, width, height):
-        BaseGeometry.integer_validator(self, "width", width)
-        BaseGeometry.integer_validator(self, "height", height)
+        super().__init__()
 
         self.__width = width
         self.__height = height
+
+        self.integer_validator("width", width)
+        self.integer_validator("height", height)
