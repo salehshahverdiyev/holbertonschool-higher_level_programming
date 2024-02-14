@@ -97,3 +97,14 @@ class Rectangle(Base):
         Method Documentation
         '''
         return self.__height * self.__width
+
+    def display(self):
+        '''
+        Method Documentation
+        '''
+        a = ""
+        for i in range(self.__height):
+            a += self.__width * "#"
+            if i != self.__height - 1:
+                a += "\n"
+        print(a)
