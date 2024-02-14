@@ -102,12 +102,12 @@ class Rectangle(Base):
         '''
         Method Documentation
         '''
-        a = ""
-        for i in range(self.__height):
-            a += self.__width * "#"
-            if i != self.__height - 1:
-                a += "\n"
-        print(a)
+        x = "#" * self.__width
+        for _ in range(self.__y):
+            print()
+        x_cordnt = " " * self.__x
+        for _ in range(self.__height):
+            print(x_cordnt, x, sep='')
 
     def __str__(self):
         '''
