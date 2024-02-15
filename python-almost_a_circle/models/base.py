@@ -61,3 +61,21 @@ class Base:
             dummy = cls(1)
         dummy.update(**dictionary)
         return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        '''
+        Method Documentation
+        '''
+        filename = cls.__name__ + ".json"
+        try:
+            with open(filename, "r") as jsonfile:
+                JsonString = jsonfile.read()
+                new_dict = cls.from_json_string(JsonString)
+                new_list = []
+                for o in new_dict:
+                    obj = cls.create(**o)
+                    new_list.append(obj)
+                return new_list
+        except IOError:
+            return []
