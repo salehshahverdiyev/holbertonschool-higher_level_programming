@@ -3,6 +3,7 @@
 Model Documentation
 '''
 
+import json
 
 class Base:
     '''
@@ -19,3 +20,12 @@ class Base:
             self.id = id
         else:
             self.id = self.__class__.__nb_objects
+
+    @staticmethod
+    def to_json_string(list_dictionaries):
+        '''
+        Method Documentation
+        '''
+        if list_dictionaries == [] or list_dictionaries is None:
+            return "[]"
+        return json.dumps(list_dictionaries)
