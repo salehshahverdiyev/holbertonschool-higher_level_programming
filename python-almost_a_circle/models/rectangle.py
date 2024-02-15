@@ -118,14 +118,17 @@ class Rectangle(Base):
 
     def update(self, *args, **kwargs):
         '''
-        Method Documentation
+        Method Documenta
         '''
-        if (len(args) != 0):
-            counter = 0
-            atrs = ['id', 'width', 'height', 'x', 'y']
-            for arg in args:
-                setattr(self, atrs[counter], arg)
-                counter += 1
+        if args:
+            self.id = args[0]
+            self.width = args[1]
+            self.height = args[2]
+            self.x = args[3]
+            self.y = args[4]
+        elif kwargs:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
 
     def to_dictionary(self):
         '''
