@@ -5,6 +5,7 @@ Model Documentation
 
 import json
 
+
 class Base:
     '''
     class Documentation
