@@ -15,11 +15,11 @@ class Base:
         '''
         Method Documentation
         '''
-        self.__class__.__nb_objects += 1
+        Base.__nb_objects += 1
         if id is not None:
             self.id = id
         else:
-            self.id = self.__class__.__nb_objects
+            self.id = Base.__nb_objects
 
     @staticmethod
     def to_json_string(list_dictionaries):
@@ -28,4 +28,4 @@ class Base:
         '''
         if list_dictionaries is None:
             return "[]"
-        return json.dump(list_dictionaries)
+        return json.dumps(list_dictionaries)
