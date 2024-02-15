@@ -26,6 +26,6 @@ class Base:
         '''
         Method Documentation.
         '''
-        if list_dictionaries is None or len(list_dictionaries) == 0:
+        if list_dictionaries is None:
             return "[]"
         return json.dumps(list_dictionaries)
