@@ -117,6 +117,9 @@ class Rectangle(Base):
 {self.x}/{self.y} - {self.width}/{self.height}"
 
     def update(self, *args):
+        '''
+        Method Documentation
+        '''
         attributes = ["id", "width", "height", "x", "y"]
         for i, attr_name in enumerate(attributes):
             if i < len(args):
