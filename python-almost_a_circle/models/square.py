@@ -32,3 +32,16 @@ class Square(Rectangle):
         '''
         return f"[Square] ({self.id}) \
 {self.x}/{self.y} - {self.size}"
+
+    def update(self, *args, **kwargs):
+        '''
+        Method Documentation
+        '''
+        if args:
+            attrs = ['id', 'size', 'x', 'y']
+            for i, attr in enumerate(attrs):
+                if i < len(args):
+                    setattr(self, attr, args[i])
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
