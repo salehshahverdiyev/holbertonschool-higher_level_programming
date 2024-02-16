@@ -79,3 +79,36 @@ class Base:
                 return new_list
         except IOError:
             return []
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        '''
+        Method Documentation
+        '''
+        screen = turtle.Screen()
+        screen.setup(width=800, height=600)
+
+        t = turtle.Turtle()
+
+        for rect in list_rectangles:
+            t.penup()
+            t.goto(rect.x, rect.y)
+            t.pendown()
+            t.forward(rect.width)
+            t.left(90)
+            t.forward(rect.height)
+            t.left(90)
+            t.forward(rect.width)
+            t.left(90)
+            t.forward(rect.height)
+            t.left(90)
+
+        for square in list_squares:
+            t.penup()
+            t.goto(square.x, square.y)
+            t.pendown()
+            for _ in range(4):
+                t.forward(square.width)
+                t.left(90)
+
+        screen.mainloop()
