@@ -4,6 +4,7 @@ Model Documentation
 '''
 
 import json
+import turtle
 
 
 class Base:
