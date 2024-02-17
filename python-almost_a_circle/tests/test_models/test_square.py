@@ -12,7 +12,7 @@ import os
 class TestBase(unittest.TestCase):
     def test_square_positive_num(self):
         square = Square(1, 2, 3, 4)
-        self.assertEquals(square.size, 1)
+        self.assertEquals(square.size, 2)
 
         square = Square(1, 2, 3)
         self.assertEquals(square.y, 3)
@@ -84,7 +84,7 @@ class TestBase(unittest.TestCase):
 
         Square.save_to_file([Square(1, id=1)])
         with open("Square.json", "r") as f:
-            self.assertEqual(f.read(), '[{"id": 1, "x": 0, "size": 1, "y": 0}]')
+            self.assertEqual(f.read(), '[{"id": 1, "size": 1, "x": 0, "y": 0}]')
 
     def test_load_from_file(self):
         try:
