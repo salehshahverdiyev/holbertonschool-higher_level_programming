@@ -12,7 +12,7 @@ import os
 class TestBase(unittest.TestCase):
     def test_square_positive_num(self):
         square = Square(1, 2, 3, 4)
-        self.assertEquals(square.size, 2)
+        self.assertEquals(square.size, 1)
 
         square = Square(1, 2, 3)
         self.assertEquals(square.y, 3)
